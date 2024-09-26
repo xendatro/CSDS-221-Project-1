@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
+        <title>CSDS 221 Project 1</title>
+    </head>
+    <body>
+        <div class="container">
+            <h2 id="header" style="color: red;"><b>Bootstrap Booking Form:</b></h2>
+            <div id="info" class="well">
+                Fill out the form and click submit button when complete...
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="user-form" class="panel panel-primary">
+                            <div class="bg-primary panel-heading"><b>User:</b></div>
+                            <div class="panel-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="form-group" id="username-form">
+                                                <div class="col-md-6">
+                                                    <label for="username" id="user-label">Username:</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="text" id="username" placeholder="Type username..." class="form-control">
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group" id="first-form">
+                                                <div class="col-md-6">
+                                                    <label for="first-name">First Name:</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="text" id="first-name" placeholder="Type first name..." class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group" id="last-form">
+                                                <div class="col-md-6">
+                                                    <label for="lastname">Last Name:</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="text" id="last-name" placeholder="Type last name..." class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div id="contact-form" class="panel panel-primary">
+                            <div class="panel-heading"><b>Contact:</b></div>
+                            <div class="panel-body">
+                                    <div class="input-group" id="phone-form">
+                                        <span class="glyphicon glyphicon-earphone input-group-addon" id="phone-glyph"></span>
+                                        <input type="number" class="form-control" placeholder="Type phone#..." aria-describedby="phone-glyph" id="phone">
+                                    </div>
+                                    <div class="input-group" id="fax-form">
+                                        <span class="glyphicon glyphicon-print input-group-addon" id="fax-glyph"></span>
+                                        <input type="number" class="form-control" placeholder="Type fax#..." aria-describedby="fax-glyph" id="fax">
+                                    </div>
+                                    <div class="input-group" id="email-form">
+                                        <span class="glyphicon glyphicon-envelope input-group-addon" id="email-glyph"></span>
+                                        <input type="email" class="form-control" placeholder="Type e-mail..." aria-describedby="email-glyph" id="email">
+                                    </div>
+                            </div>
+                        </div>
+                        <div id="schedule-form" class="panel panel-primary">
+                            <div class="panel-heading"><b>Schedule:</b></div>
+                            <div class="panel-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="adults-num">Adults:</label>
+                                                    <br />
+                                                    <select name="adults-num" class="form-control" id="adults">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="checkin">Check-in:</label> <br/>
+                                                    <input type="date" id="checkin" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="checkout">Check-out:</label><br/>
+                                                    <input type="date" id="checkout" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="days">Days:</label> <br/>
+                                                    <input type="number" id="days" class="form-control" placeholder="Displays days..." disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="cost">Cost:</label> <br/>
+                                                    <input type="number" id="cost" class="form-control" placeholder="Displays cost..." disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="other-form panel panel-primary">
+                            <div class="panel-heading"><b>Other:</b></div>
+                            <div class="panel-body">
+                                    <div class="form-group">
+                                        <label for="message">Message:</label>
+                                        <br />
+                                        <textarea id="message" name="message" rows="21" cols="40" placeholder="Type message here..." class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="range">Range:</label>
+                                        <br />
+                                        <input type="range" id="range" name="range" min="0" max="10">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="priority">Priority:</label>
+                                        <div id="priority">
+                                            <input type="radio" id="low" name="priority" value="low">
+                                            <label for="low">Low</label>
+                                            <input type="radio" id="medium" name="priority" value="medium">
+                                            <label for="medium">Medium</label>
+                                            <input type="radio" id="high" name="priority" value="high">
+                                            <label for="high">High</label>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div style="float:right;">
+                    <span>
+                        <button type="reset" class="btn btn-primary btn-lg" id="reset"><span class="glyphicon glyphicon-erase" aria-hidden="true"></span> Reset</button>
+                        <button type="button" class="btn btn-success btn-lg" value="Submit" id="submit"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Submit</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>   
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script>
+            function changeVals() {
+                let cin = moment($(checkin).val());
+                let cout = moment($(checkout).val());
+                if (cin.isValid() && cout.isValid()) {
+                    let diff = cout.diff(cin, 'days');
+                    $(days).val(diff);
+                    $(cost).val(diff*$(adults).val()*150);
+                }
+            }
+            function resetForm() {
+                toastr["info"]("Form reset!", "", {
+                    showDuration: "100",
+                    preventDuplicates: false,
+                    positionClass: "toast-bottom-left"
+                });
+            }
+            function errorToaster(s) {
+                toastr["error"]("Invalid " + s + "!", "", {
+                    showDuration: "100",
+                    preventDuplicates: false,
+                    positionClass: "toast-bottom-left"
+                });
+            }
+            function inputNotEmpty(input) {
+                if (input.val() != "") {
+                    return true;
+                }
+                return false;
+            }
+            function errorInput(input) {
+                input.addClass("has-error");
+            }
+            function unerrorInput(input) {
+                input.removeClass("has-error");
+            }
+            function onSubmit() {
+                let success = true;
+                if (!inputNotEmpty($(username))) {
+                    success = false;
+                    errorToaster("Username");
+                    errorInput($("#username-form"));
+                } else {
+                    unerrorInput($("#username-form"));
+                }
+                if (!inputNotEmpty($("#first-name"))) {
+                    success = false;
+                    errorToaster("First Name");
+                    errorInput($("#first-form"));
+                } else {
+                    unerrorInput($("#first-form"));
+                }
+                if (!inputNotEmpty($("#last-name"))) {
+                    success = false;
+                    errorToaster("Last Name");
+                    errorInput($("#last-form"));
+                } else {
+                    unerrorInput($("#last-form"));
+                }
+                if (!inputNotEmpty($("#phone"))) {
+                    success = false;
+                    errorToaster("Phone");
+                    errorInput($("#phone-form"));
+                } else {
+                    unerrorInput($("#phone-form"));
+                }
+                if (!inputNotEmpty($("#fax"))) {
+                    success = false;
+                    errorToaster("Fax");
+                    errorInput($("#fax-form"));
+                } else {
+                    unerrorInput($("#fax-form"));
+                }
+                if (!inputNotEmpty($("#email"))) {
+                    success = false;
+                    errorToaster("Email");
+                    errorInput($("#email-form"));
+                } else {
+                    unerrorInput($("#email-form"));
+                }
+                if (!inputNotEmpty($("#cost"))) {
+                    success = false;
+                    toastr["error"]("No cost was calculated!", "", {
+                        showDuration: "100",
+                        preventDuplicates: false,
+                        positionClass: "toast-bottom-left"
+                    });
+                } else if ($("#cost").val() <= 0) {
+                    success = false;
+                    toastr["error"]("Negative cost error! Check your dates.", "", {
+                        showDuration: "100",
+                        preventDuplicates: false,
+                        positionClass: "toast-bottom-left"
+                    });
+                }
+                if (success) {
+                    toastr["success"]("Form submitted successfully!", "", {
+                        showDuration: "100",
+                        preventDuplicates: false,
+                        positionClass: "toast-bottom-right"
+                    });
+                }
+            }
+            $(document).ready(() => {
+                $(checkin).change(changeVals);
+                $(checkout).change(changeVals);
+                $(adults).change(changeVals);
+                $(reset).click(resetForm);
+                $(submit).click(onSubmit);
+            });
+        </script>     
+    </body>
+</html>
